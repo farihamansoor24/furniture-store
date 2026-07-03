@@ -1,0 +1,40 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src/ts",
+    "outDir": "./dist/js",
+
+    // Environment Settings
+    "module": "esnext",
+    "target": "es2016",
+    // "moduleResolution": "node", // Firebase/npm packages ke liye zaroori hai
+    "types": [],
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true       // <-- Yahan se comma (,) hata diya hai
+  },
+  "include": [
+    "src/ts/**/*"                       // Yeh line compiler ko sirf aapke folder tak mehdood rakhegi
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "public"
+  ]
+}
